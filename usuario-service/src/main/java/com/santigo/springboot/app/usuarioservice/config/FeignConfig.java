@@ -1,22 +1,17 @@
 package com.santigo.springboot.app.usuarioservice.config;
 
-
-
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.cloud.openfeign.support.SpringMvcContract;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.client.RestTemplate;
-
-
 
 @Configuration
-public class ResTemplateConfig {
+@EnableFeignClients
 
+public class FeignConfig {
+    
     @Bean
-    public RestTemplate restTemplate() {
-        return new RestTemplate();
+    public SpringMvcContract feignContract() {
+        return new SpringMvcContract();
     }
- 
- 
-   
 }

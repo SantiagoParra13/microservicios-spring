@@ -2,14 +2,13 @@ package com.santigo.springboot.app.usuarioservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.openfeign.EnableFeignClients;
-import org.springframework.cloud.openfeign.FeignClientProperties;
-
-import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 
 
-@EnableFeignClients
+
 @SpringBootApplication
+@ComponentScan(basePackages = "com.santigo.springboot.app.usuarioservice")
+
 public class UsuarioServiceApplication {
 
 	public static void main(String[] args) {
